@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "Farmed4u-API"
+version = "0.1.0"
+description = "Farmed4u Business API backend"
+authors = ["Lee Mbugua <mbugua.dev@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.60.1"
+loguru = "^0.5.1"
+alembic = "^1.4.2"
+sqlalchemy = "^1.3.18"
+psycopg2 = "^2.8.5"
+python-dotenv = "^0.14.0"
+pydantic = "^1.6.1"
+gunicorn = "^20.0.4"
+uvicorn = "^0.11.6"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
