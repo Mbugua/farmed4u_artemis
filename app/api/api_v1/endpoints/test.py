@@ -18,6 +18,7 @@ def get_categories(
 ) -> Any:
     categories = crud.category.get(db)
     request.app.logger.info("fetching categories.... {}", categories)
+
     return categories
 
 
@@ -26,8 +27,8 @@ def create_category(
     *, db: Session = Depends(dependencies.get_db), category: Category
 ) -> List[Category]:
 
-    cat = crud.category.create_category(db, category)
-    return cat
+    category = crud.category.create_category(db, category)
+    return category
 
 
 @router.get("/super", tags=["full_cat"])
